@@ -1,0 +1,39 @@
+{
+  "exptype": "additive_additivebounds",
+  "ckpt_path": "experiments/additive_additivebounds/additive/version_4",
+  "checkpt": "None",
+  "gpus": [0],
+
+  "model": "additive",
+
+  "metrics": [
+    "recon_mse",
+    "recon_mape"
+  ],
+
+  "func_type": "additive",
+  "meta": false,
+
+  "timesteps": 20,
+  "num_samples": 100,
+  "num_epochs": 350,
+  "check_every_n_steps": 50,
+
+  "u_start": -5,
+  "u_end": 5,
+
+  "extrapolation_bound_window": 20,
+  "bound_start": 30,
+  "bound_end": 70,
+
+  "batch_size": 5,
+  "learning_rate": 1e-3,
+
+  "in_dim": 1,
+  "control_dim": 1,
+  "hidden_dim": 64,
+  "latent_dim": 4,
+  "out_dim": 1,
+
+  "latent_act": "swish"
+}
