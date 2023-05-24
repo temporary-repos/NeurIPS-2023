@@ -1,0 +1,52 @@
+{
+  "exptype": "double_pendulum_metahyper",
+  "ckpt_path": "experiments/double_pendulum_metahyper/metahyper/version_1",
+  "checkpt": "None",
+  "gpus": [0],
+  "num_workers": 0,
+
+  "model": "metahyper",
+  "meta": true,
+
+  "metrics": [
+    "reconstruction_mse",
+    "vpt",
+    "nrmse"
+  ],
+
+  "integrator": "dopri8",
+  "integrator_params": {
+    "step_size": 0.5
+  },
+
+  "dataset": "double_pendulum",
+  "dataset_ver": "double_pendulum",
+  "split": "double_pendulum",
+  "dataset_percent": 1.0,
+  "batches_to_save": 500,
+
+  "num_epochs": 3000,
+  "check_every_n_steps": 10,
+
+  "batch_size": 32,
+  "domain_size": 3,
+  "domain_varying": false,
+
+  "learning_rate": 2e-4,
+  "dim": 8,
+
+  "hyper_dim": 128,
+  "code_dim": 4,
+  "latent_dim": 4,
+  "latent_act": "swish",
+  "num_layers": 2,
+  "num_hidden": 64,
+
+  "generation_training_len": 7,
+  "generation_validation_len": 7,
+
+  "testing": {
+    "save_files": true,
+    "generation_testing_len": 7
+  }
+}
