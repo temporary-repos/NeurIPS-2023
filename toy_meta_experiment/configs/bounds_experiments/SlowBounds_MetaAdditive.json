@@ -1,0 +1,41 @@
+{
+  "exptype": "metaadditive_slowbounds",
+  "ckpt_path": "experiments/metaadditive_slowbounds/metaadditive/version_1",
+  "checkpt": "None",
+  "gpus": [0],
+
+  "model": "metaadditive",
+
+  "metrics": [
+    "recon_mse",
+    "recon_mape"
+  ],
+
+  "func_type": "multiplicative",
+  "meta": true,
+
+  "timesteps": 20,
+  "num_samples": 100,
+  "num_epochs": 50,
+  "check_every_n_steps": 10,
+
+  "u_start": -5,
+  "u_end": 5,
+
+  "extrapolation_bound_window": 10,
+  "bound_start": 70,
+  "bound_end": 90,
+
+  "batch_size": 5,
+  "learning_rate": 1e-3,
+  "k_shot": 3,
+  "num_tasks": 100,
+
+  "in_dim": 1,
+  "control_dim": 1,
+  "latent_dim": 4,
+  "hidden_dim": 112,
+  "out_dim": 1,
+
+  "latent_act": "swish"
+}
