@@ -1,0 +1,46 @@
+{
+  "exptype": "metargnres",
+  "ckpt_path": "experiments/metargnres/metargnres/version_3",
+  "checkpt": "None",
+  "gpus": [0],
+  "num_workers": 0,
+
+  "model": "metargnres",
+  "meta": true,
+
+  "metrics": [
+    "recon_mse",
+    "rel_indomain",
+    "rel_outdomain"
+  ],
+
+  "dataset": "lotka_volterra_4perenv_0indomainenvs_0outdomainenvs",
+  "dataset_ver": "lotka_volterra_4perenv_0indomainenvs_0outdomainenvs",
+  "dataset_percent": 1.0,
+  "batches_to_save": 25,
+
+  "num_epochs": 120000,
+  "check_every_n_steps": 1000,
+
+  "batch_size": 9,
+  "domain_size": 3,
+
+  "learning_rate": 5e-4,
+  "hypernet_reg_beta": 1e-6,
+  "code_reg_beta": 1e-4,
+  "dim": 2,
+
+  "code_dim": 2,
+  "latent_dim": 2,
+  "latent_act": "swish",
+  "num_layers": 2,
+  "num_hidden": 8,
+
+  "generation_training_len": 20,
+  "generation_validation_len": 20,
+
+  "testing": {
+    "save_files": true,
+    "generation_testing_len": 20
+  }
+}
